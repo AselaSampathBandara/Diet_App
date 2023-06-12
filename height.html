@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <title>BS4-Page-Layout-Basic</title>
+  <link rel="shortcut icon" type="image/png" href="src/imgs/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="src/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="src/css/main.css">
+  <link rel="stylesheet" type="text/css" href="src/css/font-awesome.min.css">
+</head>
+
+<body>
+
+  <div class="container-fluid">
+
+    <div class="row">
+      <div class="col-lg-12">
+
+        <div class="progress my-3">
+          <div class="progress-bar bg-yellow" role="progressbar" aria-valuenow="16" aria-valuemin="0"
+            aria-valuemax="100" style="width:60%">
+          </div>
+        </div>
+        <label class="text-muted float-right small">4/6</label>
+      </div>
+
+
+      <div class="col-lg-12">
+        <div class="card-position card card border-0 mx-auto">
+          <div class="card-body px-0">
+            <h3 class="text-size card-title blue text-center">What is your
+              <br>
+              Height ?
+            </h3>
+            <div class="btn-container">
+              <label class="switch btn-color-mode-switch">
+                <input type="checkbox" name="color_mode" id="color_mode" value="1" onchange="buttonChange(this)">
+                <label for="color_mode" data-on="CM" data-off="FT" class="btn-color-mode-switch-inner"></label>
+              </label>
+            </div>
+
+            <div class="text-center">
+              <div id="sowFtInput">
+
+                <label class="height-label-style">
+                  <input type="number" id="ftInput" value="5" class="text-input text-style text-input text-style text-center" />
+                  ft
+                </label>
+
+                <label class="height-label-style">
+                  <input type="number" id="inInput" value="5" class="text-input text-style text-center" />
+                  in
+                </label>
+
+              </div>
+
+              <div id="showCmInput" style="display: none;">
+
+                <label class="height-label-style">
+                  <input type="number" id="cmInput" value="10" class="text-input text-style text-center" />
+                  cm
+                </label>
+
+              </div>
+            </div>
+
+          </div>
+
+          <div class="move-buttons">
+            <button type="button" class="move-buttons btn btn-info"
+              onclick="window.location.href='selectDiet.html';">Next Step</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script type="text/javascript" src="src/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="src/js/popper.min.js"></script>
+    <script type="text/javascript" src="src/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+
+      const switchButton = $('#color_mode');
+      const switchButtonLabel = $(switchButton).closest('label').find('label');
+
+      // let inputField = document.getElementById('weightInput');
+
+      const ftInputField = $('#ftInput');
+      const inInputField = $('#inInput');
+      const cmInputField = $('#cmInput');
+
+      let actualFtValueSum = 0;
+      let actualCmValueSum = 0;
+      let actualFtValue = 0;
+      let actualInValue = 0;
+      let actualCmValue = 0;
+
+      function buttonChange(element) {
+        if (element.checked) {
+          const switchOn = $(switchButtonLabel).attr('data-on');
+          // inputField.value = ' '+switchOn;
+          // $('#weightInput').val(' ' + switchOn);
+          $("#showCmInput").css('display', 'block');
+          $("#sowFtInput").css('display', 'none');
+
+          actualFtValue = toFt($(cmInputField).val());
+
+          console.log(parseFloat($(ftInputField).val()).toString());
+
+          if (parseFloat($(inInputField).val()) > 00) {
+            actualCmValue = toCm(parseFloat($(ftInputField).val()) + parseFloat('0.' + $(inInputField).val()));
+            console.log(actualCmValue);
+
+            $(cmInputField).val(actualCmValue.toString().split('.')[0]);
+
+          } else {
+            actualCmValue = toCm(parseFloat($(ftInputField).val()));
+            $(cmInputField).val(actualCmValue.toString().split('.')[0]);
+          }
+
+          // console.log(switchOn);
+        } else {
+          const switchOff = $(switchButtonLabel).attr('data-off');
+          // inputField.value = switchOff;
+          // $('#weightInput').val(' ' + switchOff);
+          $("#showCmInput").css('display', 'none');
+          $("#sowFtInput").css('display', 'block');
+
+          // actualFtValue = toFt(parseFloat($(cmInputField).val()));
+          actualFtValue = toFt(parseFloat(actualCmValue));
+          console.log(actualFtValue);
+
+          if (actualFtValue % 1 == 0) {
+            // is a whole Number 
+            $(ftInputField).val(actualFtValue);
+            $(inInputField).val('00');
+
+          } else {
+            // is a decimal Number 
+            $(ftInputField).val(actualFtValue.toString().split('.')[0]);
+            $(inInputField).val(actualFtValue.toString().split('.')[1]);
+          }
+        }
+      }
+
+      function toFt(cmLength) {
+        return parseFloat(cmLength) / 30.48;
+      }
+
+      function toCm(ftLength) {
+        return parseFloat(ftLength) * 30.48;
+      }
+
+      function inchToFt(inchLength) {
+        return parseFloat(inchLength) / 12;
+      }
+
+      function ftToInch(ftLength) {
+        return parseFloat(ftLength) * 12;
+      }
+
+      function roundOff(number) {
+        return Math.round(number, 0);
+      }
+
+
+    </script>
+
+</body>
+
+</html>

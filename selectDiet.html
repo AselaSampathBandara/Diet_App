@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>BS4-Page-Layout-Basic</title>
+    <link rel="shortcut icon" type="image/png" href="src/imgs/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="src/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="src/css/main.css">
+    <!-- <link rel="stylesheet" type="text/css" href="src/css/main.css"> -->
+    <link rel="stylesheet" type="text/css" href="src/css/font-awesome.min.css">
+    <link href="src/css/styling.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="progress my-3">
+                    <div class="progress-bar bg-yellow" role="progressbar" aria-valuenow="16" aria-valuemin="0"
+                        aria-valuemax="100" style="width:75%">
+                    </div>
+                </div>
+                <label class="text-muted float-right small">5/6</label>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="card-position card card border-0 mx-auto mt-1">
+                    <div class="card-body px-0">
+
+                        <h3 class="text-size card-title blue text-center">Select your
+                            <br>
+                            Diet Type
+                        </h3>
+
+                        <div class="accordion">
+
+                            <details>
+                                <summary class="calorie-style">
+
+                                    <span><img class="img-style" src="./src/imgs/low-calorie-images/cal.png"></span>
+
+                                    <!-- <div> -->
+                                    <ul class="calorie-style text-center p-0">Low Calorie</ul>
+                                    <!-- </div> -->
+                                    <span class="icon">
+                                        <svg class="float-left" xmlns="http://www.w3.org/2000/svg" width="14"
+                                            height="25" viewBox="0 0 14 9" fill="none">
+                                            <path d="M1 1L7 7L13 1" stroke="#EBE8F0" stroke-width="2"
+                                                stroke-linecap="round" />
+                                        </svg>
+                                    </span>
+                                </summary>
+                                <div>
+                                    <div>
+
+                                        <h3 class="font-style text-center">
+                                            Follow these meal plans for <br>
+                                            a healthy lifestyle
+                                        </h3>
+
+                                        <div class="text-center">
+                                            Consult your doctor for any information<br>
+                                            or contact Dr.Ananda Perera through
+                                        </div>
+
+                                        <div class="text-center p-2">
+                                            <a href="url" class="font-color"> http://www.247econsult.com </a>
+                                        </div>
+
+                                        <div class="ul-widget-app__browser-list-1 mb-4">
+                                            <img class="profile-picture avatar-md rounded-circle"
+                                                src="./src/imgs/low-calorie-images/very-low.png" alt="alt"><span
+                                                class="text-15 ml-3">Very Low Calorie Diet (VLSD)</span>
+                                            <button class="first-btn-style btn btn-lg"
+                                                type="button" onclick="CmdSetDietPlanType_Click(800)" step_number="3">
+                                                View
+                                            </button>
+                                        </div>
+                                        <div class="ul-widget-app__browser-list-2 mb-4">
+                                            <img class="profile-picture avatar-md rounded-circle"
+                                                src="./src/imgs/low-calorie-images/1600kcal.png" alt="alt"><span
+                                                class="text-15">1600 KCAL Diet</span>
+                                            <button class="secound-btn-style btn btn-lg"
+                                                type="button" onclick="CmdSetDietPlanType_Click(1600)" step_number="3">
+                                                View
+                                            </button>
+                                        </div>
+                                        <div class="ul-widget-app__browser-list-1 mb-4">
+                                            <img class="profile-picture avatar-md rounded-circle"
+                                                src="./src/imgs/low-calorie-images/2200kcal.png" alt="alt"><span
+                                                class="text-15">2200 KCAL Diet</span>
+                                            <button class="secound-btn-style btn btn-lg"
+                                                type="button" onclick="CmdSetDietPlanType_Click(2200)" step_number="3">
+                                                View
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </details>
+
+                            <div>
+                                <details>
+                                    <summary>
+                                        <span><img class="img2-style"
+                                                src="./src/imgs/low-calorie-images/Screenshot (987).png"></span>
+                                        <ul class="label-style p-0">Diabetic</ul>
+                                        <span class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9"
+                                                viewBox="0 0 14 9" fill="none">
+                                                <path d="M1 1L7 7L13 1" stroke="#EBE8F0" stroke-width="2"
+                                                    stroke-linecap="round" />
+                                            </svg>
+                                        </span>
+                                    </summary>
+                                    <div>
+                                        <div>
+
+                                            <h3 class="font-style text-center">
+                                                Follow these meal plans for <br>
+                                                a healthy lifestyle
+                                            </h3>
+
+                                            <div class="text-center">
+                                                Consult your doctor for any information<br>
+                                                or contact Dr.Ananda Perera through
+                                            </div>
+
+                                            <div class="text-center p-2">
+                                                <a href="url" class="font-color"> http://www.247econsult.com </a>
+                                            </div>
+
+                                            <div class="ul-widget-app__browser-list-1 mb-4">
+                                                <img class="profile-picture avatar-md rounded-circle"
+                                                    src="./src/imgs/low-calorie-images/very-low.png" alt="alt"><span
+                                                    class="text-15 ml-3">1600 KCAL Traditional Diabetic Diet</span>
+                                                <button class="secound-btn-style secound-btn-style btn btn-lg"
+                                                    type="button" onclick="CmdSetDietPlanType_Click('1600DM')"
+                                                    step_number="3">
+                                                    View
+                                                </button>
+                                            </div>
+                                            <div class="ul-widget-app__browser-list-2 mb-4">
+                                                <img class="profile-picture avatar-md rounded-circle"
+                                                    src="./src/imgs/low-calorie-images/1600kcal.png" alt="alt"><span
+                                                    class="text-15 ml-3">2200 KCAL Traditional Diabetic Diet</span>
+                                                <button class="secound-btn-style secound-btn-style btn btn-lg"
+                                                    type="button" onclick="CmdSetDietPlanType_Click('2200DM')"
+                                                    step_number="3">
+                                                    View
+                                                </button>
+                                            </div>
+                                            <div class="ul-widget-app__browser-list-1 mb-4">
+                                                <img class="profile-picture avatar-md rounded-circle"
+                                                    src="./src/imgs/low-calorie-images/2200kcal.png" alt="alt"><span
+                                                    class="text-15 ml-3">1600 KCAL Low Biologically Available Glucose
+                                                    40%</span>
+                                                <button class="secound-btn-style secound-btn-style btn btn-lg"
+                                                    type="button" onclick="CmdSetDietPlanType_Click('1600DM')"
+                                                    step_number="3">
+                                                    View
+                                                </button>
+                                            </div>
+                                            <div class="ul-widget-app__browser-list-2 mb-4">
+                                                <img class="profile-picture avatar-md rounded-circle"
+                                                    src="./src/imgs/low-calorie-images/1600kcal.png" alt="alt"><span
+                                                    class="text-15 ml-3">1600 KCAL Low Biologically Available Glucose
+                                                    20%</span>
+                                                <button class="secound-btn-style secound-btn-style btn btn-lg"
+                                                    type="button" onclick="CmdSetDietPlanType_Click('1600DM')"
+                                                    step_number="3">
+                                                    View
+                                                </button>
+                                            </div>
+                                            <div class="ul-widget-app__browser-list-1 mb-4">
+                                                <img class="profile-picture avatar-md rounded-circle"
+                                                    src="./src/imgs/low-calorie-images/2200kcal.png" alt="alt"><span
+                                                    class="text-15 ml-3">2200 KCAL Low Biologically Available Glucose
+                                                    40%</span>
+                                                <button class="secound-btn-style secound-btn-style btn btn-lg"
+                                                    type="button" onclick="CmdSetDietPlanType_Click('2200DM')"
+                                                    step_number="3">
+                                                    View
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </details>
+                            </div>
+
+                            <details>
+                                <summary>
+                                    <span><img class="img3-style" src="./src/imgs/low-calorie-images/medit.png"></span>
+                                    <ul class="label-style p-0">Mediterranean</ul>
+                                    <span class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9"
+                                            fill="none">
+                                            <path d="M1 1L7 7L13 1" stroke="#EBE8F0" stroke-width="2"
+                                                stroke-linecap="round" />
+                                        </svg>
+                                    </span>
+                                </summary>
+                                <div>
+                                    <div>
+
+                                        <h3 class="font-style text-center">
+                                            Follow these meal plans for <br>
+                                            a healthy lifestyle
+                                        </h3>
+
+                                        <div class="text-center">
+                                            Consult your doctor for any information<br>
+                                            or contact Dr.Ananda Perera through
+                                        </div>
+
+                                        <div class="text-center p-2">
+                                            <a href="url" class="font-color"> http://www.247econsult.com </a>
+                                        </div>
+
+                                        <div class="ul-widget-app__browser-list-1 mb-4">
+                                            <img class="profile-picture avatar-md rounded-circle"
+                                                src="./src/imgs/low-calorie-images/2200kcal.png" alt="alt"><span
+                                                class="text-15 ml-3">1600 KCAL Mediterranean Diet</span>
+                                            <button class="secound-btn-style secound-btn-style btn btn-lg"
+                                                type="button" onclick="CmdSetDietPlanType_Click('1600M1')"
+                                                step_number="3">
+                                                View
+                                            </button>
+                                        </div>
+                                        <div class="ul-widget-app__browser-list-2 mb-4">
+                                            <img class="profile-picture avatar-md rounded-circle"
+                                                src="./src/imgs/low-calorie-images/1600kcal.png" alt="alt"><span
+                                                class="text-15 ml-3">2200 KCAL Mediterranean Diet</span>
+                                            <button class="secound-btn-style secound-btn-style btn btn-lg"
+                                                type="button" onclick="CmdSetDietPlanType_Click('2200M2')"
+                                                step_number="3">
+                                                View
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </details>
+
+                            <details>
+                                <summary>
+                                    <span><img class="img4-style"
+                                            src="./src/imgs/low-calorie-images/Mothers.png"></span>
+                                    <ul class="label-style p-0">For Mothers To Be</ul>
+                                    <span class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9"
+                                            fill="none">
+                                            <path d="M1 1L7 7L13 1" stroke="#EBE8F0" stroke-width="2"
+                                                stroke-linecap="round" />
+                                        </svg>
+                                    </span>
+                                </summary>
+                                <div>
+
+                                    <h3 class="font-style text-center">
+                                        Follow these meal plans for <br>
+                                        a healthy lifestyle
+                                    </h3>
+
+                                    <div class="text-center">
+                                        Consult your doctor for any information<br>
+                                        or contact Dr.Ananda Perera through
+                                    </div>
+
+                                    <div class="text-center p-2">
+                                        <a href="url" class="font-color"> http://www.247econsult.com </a>
+                                    </div>
+
+                                    <div class="ul-widget-app__browser-list-1 mb-4">
+                                        <img class="profile-picture avatar-md rounded-circle"
+                                            src="./src/imgs/low-calorie-images/very-low.png" alt="alt"><span
+                                            class="text-15 ml-3">1600 KCAL Pregnancy normal weight (1-13
+                                            Weeks)</span>
+                                        <button class="secound-btn-style secound-btn-style btn btn-lg"
+                                            type="button" onclick="CmdSetDietPlanType_Click('1600T1')" step_number="3">
+                                            View
+                                        </button>
+                                    </div>
+                                    <div class="ul-widget-app__browser-list-2 mb-4">
+                                        <img class="profile-picture avatar-md rounded-circle"
+                                            src="./src/imgs/low-calorie-images/1600kcal.png" alt="alt"><span
+                                            class="text-15 ml-3">1600 KCAL Pregnancy normal weight (14-27
+                                            Weeks)</span>
+                                        <button class="secound-btn-style btn secound-btn-style btn btn-lg"
+                                            type="button" onclick="CmdSetDietPlanType_Click('1600T2')" step_number="3">
+                                            View
+                                        </button>
+                                    </div>
+                                    <div class="ul-widget-app__browser-list-1 mb-4">
+                                        <img class="profile-picture avatar-md rounded-circle"
+                                            src="./src/imgs/low-calorie-images/2200kcal.png" alt="alt"><span
+                                            class="text-15 ml-3">1600 KCAL Pregnancy normal weight (28-40
+                                            Weeks)</span>
+                                        <button class="secound-btn-style secound-btn-style btn btn-lg"
+                                            type="button" onclick="CmdSetDietPlanType_Click('1600T3')" step_number="3">
+                                            View
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </details>
+
+                        </div>
+                    </div>
+                    <!-- <div class="move-buttons">
+                        <button type="button" class="move-buttons btn btn-info"
+                            onclick="window.location.href='dietPlan.html';">Next
+                            Step
+                        </button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="src/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="src/js/popper.min.js"></script>
+    <script type="text/javascript" src="src/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+
+        let Diet_PLAN_SELECTION = "https://api.textware.lk/DietAPI/GetDataNew";
+
+        localStorage.removeItem('response');
+
+
+        function CmdSetDietPlanType_Click(value) {
+            _DietPlanType = value;
+            ignoringArray = [];
+            CmdSetDietPlanType(value);
+        }
+
+        function apiData(data) {
+            ignoringArray.map((item) => {
+                delete data[item];
+            });
+            savedData = {
+                ...savedData,
+                ...data,
+            };
+            // console.log(data);
+            setContent(savedData);
+        }
+
+
+        let apiadvice;
+
+        //call diet type api
+        function CmdSetDietPlanType(value) {
+            fetch(Diet_PLAN_SELECTION, {
+                method: "POST",
+                mode: "no-cors",
+                headers: {
+                    "Content-type": "application/json",
+                },
+                body: JSON.stringify({
+                    CaloriesCount: value,
+                }),
+            },)
+                .then((response) => response.json())
+                .then((data) => {
+                    apiData(data);
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+            // navigateToFormStep(3);
+            // onclick="window.location.href='age.html';"
+            window.location.href = 'dietPlan.html?cal=' + value;
+        }
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>BS4-Page-Layout-Basic</title>
+    <link rel="shortcut icon" type="image/png" href="src/imgs/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="src/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="src/css/main.css">
+    <link rel="stylesheet" type="text/css" href="src/css/font-awesome.min.css">
+    <link href="src/css/styling.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <!-- <div class="col-lg-12">
+
+            <div class="progress my-3">
+                <div class="progress-bar bg-yellow" role="progressbar" aria-valuenow="16" aria-valuemin="0"
+                    aria-valuemax="100" style="width:100%">
+                </div>
+            </div>
+            <label class="text-muted float-right small">6/6</label>
+        </div> -->
+
+            <div class="col-lg-12">
+                <div class="card-position card card border-0 mx-auto mt-1">
+                    <div class="card-body px-0">
+                        <!-- <div id="end"> -->
+
+                        <h2 class="text-size blue text-center">Your Diet
+                            <br>
+                            Plan Is Here !!
+                        </h2>
+
+                        <div id="end">
+                            <h4 class="text-center my-4">
+                                <span id="DietPlanHeading"></span>
+                            </h4>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <div id="content">
+                                        <div id="DietPlan">
+                                            <div class="row">
+                                                <div class="col-12 my-3">
+
+                                                    <h5 class="text-size-style blue ml-5 mb-3 display-none"
+                                                        id="breackfastHeading">
+                                                        Breackfast</h5>
+
+                                                    <div class="card bg-pale-gray border-0 display-none"
+                                                        id="breakfastbtn">
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    <ul class="ul-widget1" id="DietPlanBreakfast">
+                                                                        <li></li>
+                                                                        <li></li>
+                                                                        <li></li>
+                                                                        <li></li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="col-6"><img
+                                                                        src="./src/imgs/low-calorie-images/breckfast.png">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12 my-3">
+                                                    <h5 class="text-size-style blue ml-5 mb-3 display-none"
+                                                        id="morningSnackHeading">Morning Snack</h5>
+
+                                                    <div class="card bg-pale-gray border-0 display-none"
+                                                        id="morningSnackbtn">
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    <ul class="ul-widget1" id="DietPlanMorningSnacks">
+                                                                        <li></li>
+                                                                        <li></li>
+                                                                        <li></li>
+                                                                        <li></li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="col-6"><img
+                                                                        src="./src/imgs/low-calorie-images/morningsanc.png">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12 my-3">
+                                                    <h5 class="text-size-style blue ml-5 mb-3 display-none"
+                                                        id="lunchHeading">
+                                                        Lunch</h5>
+
+                                                    <div class="card bg-pale-gray border-0 display-none" id="lunchbtn">
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    <ul class="ul-widget1" id="DietPlanLunch">
+                                                                        <li></li>
+                                                                        <li></li>
+                                                                        <li></li>
+                                                                        <li></li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="col-6"> <img
+                                                                        src="./src/imgs/low-calorie-images/lunch.png">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12 my-3">
+                                                    <h5 class="text-size-style blue ml-5 mb-3 display-none"
+                                                        id="eveningSnackHeading">Evening Snack</h5>
+
+                                                    <div class="card bg-pale-gray border-0 display-none"
+                                                        id="eveningSnackBtn">
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    <ul class="ul-widget1" id="DietEveningSnacks">
+                                                                        <li></li>
+                                                                        <li></li>
+                                                                        <li></li>
+                                                                        <li></li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="col-6"><img
+                                                                        src="./src/imgs/low-calorie-images/morningsanc.png">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12 my-3">
+                                                    <h5 class="text-size-style blue ml-5 mb-3 display-none"
+                                                        id="dinnerHeading">
+                                                        Dinner</h5>
+
+                                                    <div class="card bg-pale-gray border-0 display-none" id="dinnerBtn">
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    <ul class="ul-widget1" id="DietPlanDinner">
+                                                                        <li></li>
+                                                                        <li></li>
+                                                                        <li></li>
+                                                                        <li></li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="col-6"><img
+                                                                        src="./src/imgs/low-calorie-images/lunch.png">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3">
+                            <button class="btn btn-success btn-md m-1 btn-navigate-form-step"
+                                type="btn btn-success btn-sm m-1" onclick="moveToDietPlanPage()" step_number="3">
+                                Prev
+                            </button>
+                            <button class="btn btn-success btn-md m-1 submit-btn" type="submit"
+                                onclick="Convert_HTML_To_PDF()">
+                                Save
+                            </button>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <script type="text/javascript" src="src/js/jquery-3.2.1.min.js"></script>
+            <script type="text/javascript" src="src/js/popper.min.js"></script>
+            <script type="text/javascript" src="src/js/bootstrap.min.js"></script>
+            <script src="./src/js/html2pdf.bundle.min.js"></script>
+
+            <script type="text/javascript">
+
+                let DIET_CONSULTATION = "https://247econsult.net/diets/dietConsInput.php";
+                let ADVICE = "https://247econsult.net/diets/dietConsOutput.php";
+                let Diet_PLAN_SELECTION = "https://api.textware.lk/DietAPI/GetDataNew";
+
+                const search = window.location.search.slice(1);
+                // console.log(search);
+                const cal = search.split('=')[0];
+                const calValue = search.split('=')[1];
+                // console.log(cal, calValue);
+
+                function moveToDietPlanPage() {
+                    window.location.href = 'dietPlan.html?cal=' + calValue;
+                }
+
+                const responseJson = {
+                    "Breakfast": [
+                        "Bread - Whole Barley  - 1 slice",
+                        "MUFA - Canola oil  1 tsp",
+                        "Sago 1/4 cup"
+                    ],
+                    "Morning_Snacks": [
+                        "Cutlets 1",
+                        "Koththamalli drink 1 cup"
+                    ],
+                    "Diet_Plan_Name": "Very Low Calorie Diet",
+                    "Additional": "",
+                    "Dinner": [
+                        "Tapioca or Manioc 1/4 cup",
+                        "Kadala 1/4 cup",
+                        "Beet 1/2 cup",
+                        "Plantain flower 1 cup",
+                        "MUS - Olive oil  1 tsp",
+                        "Dates or Rata indi 4"
+                    ],
+                    "Evening_Snacks": [
+                        "Dodol 3 cm cube 1",
+                        "Tea 1 cup"
+                    ],
+                    "Lunch": [
+                        "Maize 1/2 cup",
+                        "Crabs 2 tbs",
+                        "Carrot 1 cup",
+                        "Cabbage 1 cup",
+                        "MUS - Macademia nuts dry roasted 10",
+                        "Papaya medium 1/2"
+                    ]
+                };
+
+                // veryLowKcalDiet = JSON.stringify(veryLowKcalDietJson);
+
+                // console.log(veryLowKcalDiet);
+
+                if (localStorage.getItem('response') != null) {
+                    checkDietPlan(JSON.parse(localStorage.getItem('response')));
+                } else {
+                    CmdSetDietPlanType();
+                }
+
+                // checkDietPlan(responseJson, responseJson.length);
+
+                function ShowDietPlan() {
+                    CmdSetDietPlanType(_DietPlanType);
+                }
+
+                async function checkDietPlan(response) {
+
+                    console.log(response);
+
+                    if (response.Diet_Plan_Name.length) {
+                        SetDietPlanName(response.Diet_Plan_Name);
+                        // console.log(response.Diet_Plan_Name);
+                    }
+                    if (response.Breakfast.length) {
+                        SetBreakfast(response.Breakfast);
+                    }
+                    if (response.Morning_Snacks.length) {
+                        SetMorningSnacks(response.Morning_Snacks);
+                    }
+                    if (response.Lunch.length) {
+                        SetLunch(response.Lunch);
+                    }
+                    if (response.Evening_Snacks.length) {
+                        SetEveningSnacks(response.Evening_Snacks);
+                    }
+                    if (response.Dinner.length) {
+                        SetDinner(response.Dinner);
+                    }
+                }
+
+                function SetDietPlanName(Diet_Plan_Name) {
+                    $("#DietPlanHeading").html("");
+                    $("#DietPlanHeading").append(
+                        ' <span><strong>' + Diet_Plan_Name + "</strong></span>"
+                    );
+                }
+
+                function SetBreakfast(Breakfast) {
+                    // console.log('SetBreakfast', Breakfast);
+                    $("#breackfastHeading").css("display", "block");
+                    $("#breakfastbtn").css("display", "block");
+                    $("#DietPlanBreakfast").html("");
+                    for (i = 0; i < Breakfast.length; i++) {
+                        $("#DietPlanBreakfast").append(
+                            ' <li class="mb-2"><span >' + Breakfast[i].replace(/[^a-zA-Z0-9 ]/g, " ") + "</span></li>"
+                        );
+                    }
+                }
+
+                // }
+
+                //Morning Snack
+                function SetMorningSnacks(Morning_Snacks) {
+                    // console.log('SetMorningSnacks', Morning_Snacks);
+                    $("#morningSnackHeading").css("display", "block");
+                    $("#morningSnackbtn").css("display", "block");
+                    $("#DietPlanMorningSnacks").html("");
+                    for (i = 0; i < Morning_Snacks.length; i++) {
+                        $("#DietPlanMorningSnacks").append(
+                            ' <li class="mb-2"><span >' +
+                            Morning_Snacks[i].replace(/[^a-zA-Z0-9 ]/g, " ") +
+                            "</span></li>"
+                        );
+                    }
+                }
+
+                //Lunch
+                function SetLunch(Lunch) {
+                    // console.log('SetLunch', Lunch);
+                    $("#lunchHeading").css("display", "block");
+                    $("#lunchbtn").css("display", "block");
+                    $("#DietPlanLunch").html("");
+                    for (i = 0; i < Lunch.length; i++) {
+                        $("#DietPlanLunch").append(
+                            ' <li class="mb-2"><span >' + Lunch[i].replace(/[^a-zA-Z0-9 ]/g, " ") + "</span></li>"
+                        );
+                    }
+                }
+
+                //Evening Snacks
+                function SetEveningSnacks(Evening_Snacks) {
+                    // console.log('SetEveningSnacks', Evening_Snacks);
+                    $("#eveningSnackHeading").css("display", "block");
+                    $("#eveningSnackBtn").css("display", "block");
+                    $("#DietEveningSnacks").html("");
+                    for (i = 0; i < Evening_Snacks.length; i++) {
+                        $("#DietEveningSnacks").append(
+                            ' <li class="mb-2"><span >' +
+                            Evening_Snacks[i].replace(/[^a-zA-Z0-9 ]/g, " ") +
+                            "</span></li>"
+                        );
+                    }
+                }
+
+                //Dinner
+                function SetDinner(Dinner) {
+                    // console.log('SetDinner', Dinner);
+                    $("#dinnerHeading").css("display", "block");
+                    $("#dinnerBtn").css("display", "block");
+                    $("#DietPlanDinner").html("");
+                    for (i = 0; i < Dinner.length; i++) {
+                        $("#DietPlanDinner").append(
+                            ' <li class="mb-2"><span >' + Dinner[i].replace(/[^a-zA-Z0-9 ]/g, " ") + "</span></li>"
+                        );
+                    }
+                }
+
+                function CmdSetDietPlanType(value) {
+                    fetch(Diet_PLAN_SELECTION, {
+                        // fetch(responseJson, {
+                        method: "POST",
+                        mode: "no-cors",
+                        headers: {
+                            "Content-type": "application/json",
+                        },
+                        body: JSON.stringify({
+                            CaloriesCount: calValue,
+                        }),
+                    },)
+                        .then((response) => response.json())
+                        .then((data) => {
+                            // apiData(data);
+                            checkDietPlan(data);
+                        })
+                        .catch((error) => {
+                            console.log(error);
+                        });
+                }
+
+                //save the file
+                window.jsPDF = window.jspdf.jsPDF;
+
+                // Convert HTML content to PDF
+                function Convert_HTML_To_PDF() {
+                    var element = document.getElementById("end");
+
+                    html2pdf(element, {
+                        // margin: [90, 20, 100, 10],
+                        margin: [28, 10, 10, 10],
+                        filename: "DietType.pdf",
+                        image: {
+                            type: "png",
+                            quality: 0.99,
+                        },
+                        html2canvas: {
+                            // dpi: 192,
+                            letterRendering: true,
+                            useCORS: true,
+                        },
+                        jsPDF: {
+                            unit: "pt",
+                            format: "a4",
+                            orientation: "portrait",
+                        },
+                    });
+                    // localStorage.removeItem('response');
+                }
+
+
+            </script>
+
+
+</body>
+
+</html>
