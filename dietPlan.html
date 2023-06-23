@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <title>BS4-Page-Layout-Basic</title>
+    <title>Easy-Diet</title>
     <link rel="shortcut icon" type="image/png" href="src/imgs/favicon.ico">
     <link rel="stylesheet" type="text/css" href="src/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="src/css/main.css">
@@ -56,7 +56,7 @@
                                                         id="breakfastbtn">
                                                         <div class="card-body">
                                                             <div class="row">
-                                                                <div class="col-6">
+                                                                <div class="col-7">
                                                                     <ul class="ul-widget1" id="DietPlanBreakfast">
                                                                         <li></li>
                                                                         <li></li>
@@ -64,8 +64,10 @@
                                                                         <li></li>
                                                                     </ul>
                                                                 </div>
-                                                                <div class="col-6"><img
-                                                                        src="./src/imgs/low-calorie-images/breckfast.png">
+                                                                <div class="col-5">
+                                                                    <div class="text-center"><img class="img-fluid"
+                                                                            src="./src/imgs/diet-plan/breackfast.PNG">
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -80,7 +82,7 @@
                                                         id="morningSnackbtn">
                                                         <div class="card-body">
                                                             <div class="row">
-                                                                <div class="col-6">
+                                                                <div class="col-7">
                                                                     <ul class="ul-widget1" id="DietPlanMorningSnacks">
                                                                         <li></li>
                                                                         <li></li>
@@ -88,8 +90,10 @@
                                                                         <li></li>
                                                                     </ul>
                                                                 </div>
-                                                                <div class="col-6"><img
-                                                                        src="./src/imgs/low-calorie-images/morningsanc.png">
+                                                                <div class="col-5">
+                                                                    <div class="text-center"> <img class="img-fluid"
+                                                                            src="./src/imgs/diet-plan/morning-snacks.PNG">
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -104,7 +108,7 @@
                                                     <div class="card bg-pale-gray border-0 display-none" id="lunchbtn">
                                                         <div class="card-body">
                                                             <div class="row">
-                                                                <div class="col-6">
+                                                                <div class="col-7">
                                                                     <ul class="ul-widget1" id="DietPlanLunch">
                                                                         <li></li>
                                                                         <li></li>
@@ -112,8 +116,9 @@
                                                                         <li></li>
                                                                     </ul>
                                                                 </div>
-                                                                <div class="col-6"> <img
-                                                                        src="./src/imgs/low-calorie-images/lunch.png">
+                                                                <div class="col-5">
+                                                                    <div class="text-center"><img class="img-fluid"
+                                                                            src="./src/imgs/diet-plan/lunch.PNG"></div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -128,7 +133,7 @@
                                                         id="eveningSnackBtn">
                                                         <div class="card-body">
                                                             <div class="row">
-                                                                <div class="col-6">
+                                                                <div class="col-7">
                                                                     <ul class="ul-widget1" id="DietEveningSnacks">
                                                                         <li></li>
                                                                         <li></li>
@@ -136,8 +141,10 @@
                                                                         <li></li>
                                                                     </ul>
                                                                 </div>
-                                                                <div class="col-6"><img
-                                                                        src="./src/imgs/low-calorie-images/morningsanc.png">
+                                                                <div class="col-5">
+                                                                    <div class="text-center"><img class="img-fluid"
+                                                                            src="./src/imgs/diet-plan/morning-snacks.PNG">
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -152,7 +159,7 @@
                                                     <div class="card bg-pale-gray border-0 display-none" id="dinnerBtn">
                                                         <div class="card-body">
                                                             <div class="row">
-                                                                <div class="col-6">
+                                                                <div class="col-7">
                                                                     <ul class="ul-widget1" id="DietPlanDinner">
                                                                         <li></li>
                                                                         <li></li>
@@ -160,8 +167,9 @@
                                                                         <li></li>
                                                                     </ul>
                                                                 </div>
-                                                                <div class="col-6"><img
-                                                                        src="./src/imgs/low-calorie-images/lunch.png">
+                                                                <div class="col-5">
+                                                                    <div class="text-center"><img class="img-fluid"
+                                                                            src="./src/imgs/diet-plan/lunch.PNG"></div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -275,7 +283,7 @@
             // CmdSetDietPlanType();
             // checkDietPlan(responseJson, responseJson.length);
 
-            if (localStorage.getItem('response')!=null) {
+            if (localStorage.getItem('response') != null) {
                 checkDietPlan(JSON.parse(localStorage.getItem('response')));
             } else {
                 CmdSetDietPlanType();
@@ -421,7 +429,7 @@
                 var element = document.getElementById("end");
 
                 html2pdf(element, {
-                    margin: [50, 10, 10, 10],
+                    margin: [55, 10, 10, 10],
                     filename: "DietType.pdf",
                     image: {
                         type: "png",

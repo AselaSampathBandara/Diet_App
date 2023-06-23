@@ -1,5 +1,3 @@
-
-
 // console.log("Age picker called");
 var scrollerOptions = {
   mouseWheel: true,
@@ -8,14 +6,12 @@ var scrollerOptions = {
   bounce: true,
 };
 
-
 function setValuePicker(id) {
   // $.fn.hasAttr = function (name) {
 
   //   return this.attr(name) !== undefined;
   // };
 
-  
   $(`#${id}`).each(function (index) {
     $(this).html("<div><ul></ul></div>");
     // shadow options
@@ -42,7 +38,7 @@ function setValuePicker(id) {
     console.log(max);
     var zeros = true;
     var increment = 1.0;
-    var startingValue = 0.0;
+    var startingValue = 30.0;
     if ($(this).attr("zero_padded") == "false") zeros = false;
     if ($(this).hasAttr("increment")) {
       increment = $(this).attr("increment");
@@ -136,8 +132,11 @@ function setValuePicker(id) {
     });
 }
 
+// let age = 35;
+
+// document.getElementById("spinner_01").innerHTML = age;
+
 $(document).ready(function () {
-  
   $.fn.hasAttr = function (name) {
     return this.attr(name) !== undefined;
   };
@@ -165,9 +164,10 @@ $(document).ready(function () {
     var numLIs = "";
     var label;
     var max = 100; // default
+    // var min = 1; // default
     var zeros = true;
     var increment = 1.0;
-    var startingValue = 29.0;
+    var startingValue = 0.0;
     if ($(this).attr("zero_padded") == "false") zeros = false;
     if ($(this).hasAttr("increment")) {
       increment = $(this).attr("increment");
@@ -175,6 +175,11 @@ $(document).ready(function () {
     }
     if ($(this).hasAttr("max")) max = parseInt($(this).attr("max")); // alert(i + '.) ' + $(this).hasAttr('max'));
     var i = 0;
+
+    // if ($(this).hasAttr("min")) min = parseInt($(this).attr("min")); // alert(i + '.) ' + $(this).hasAttr('max'));
+    // var i = 0;
+
+    // for (i = startingValue; i < max + 1; i += increment) {
     for (i = startingValue; i < max + 1; i += increment) {
       var iValue = String(i);
       if (String(iValue).indexOf(".5", 0) > -1) {
@@ -222,7 +227,7 @@ $(document).ready(function () {
       var startingValue = 1;
       if ($(".spinner").eq(index).attr("value"))
         startingValue = $(".spinner").eq(index).attr("value");
-      spinScroll.goToPage(0, 1, 0, 1);
+      spinScroll.goToPage(0, startingValue, 1);
 
       document.getElementById($(this).attr("id")).IScrollInstance = spinScroll;
     }); // .spinners each
@@ -272,10 +277,7 @@ function refreshSpinnerPosition(spinner, x, y, a) {
 
 let pick = {};
 
-let age = 35;
-
 function updateSpinnerValue(spinner) {
-  
   var y = spinner.currentPage.pageY;
   var selectedValue = $(spinner.wrapper).find("li").eq(y).text();
   $(spinner.wrapper).attr("value", parseInt(selectedValue));
@@ -287,58 +289,12 @@ function updateSpinnerValue(spinner) {
       parseInt(selectedValue) +
       "]"
   );
-  
+
   pick[$(spinner.wrapper).attr("id")] = selectedValue;
 
   if ($(spinner.wrapper).attr("id") === "spinner_01") {
     age = pick.spinner_01;
   }
-
-  ////////////////////////////////
-  //weight
-  // if ($(spinner.wrapper).attr("id") === "spinner_02") {
-  //   kiloWeight = pick.spinner_02;
-  //   lbsWeight = Math.round(kiloWeight * 2.20462);
-  // }
-  // if ($(spinner.wrapper).attr("id") === `spinner_KW${kiloWeightId}`) {
-  //   kiloWeight = pick[`spinner_KW${kiloWeightId}`];
-  //   lbsWeight = Math.round(kiloWeight * 2.20462);
-  // }
-  // if ($(spinner.wrapper).attr("id") === `spinner_LW${lbsWeightId}`) {
-  //   lbsWeight = pick[`spinner_LW${lbsWeightId}`];
-  //   kiloWeight = Math.round(lbsWeight / 2.20462);
-  // }
-
-  /////////////////////////////////
-  // height
-  // if ($(spinner.wrapper).attr("id") === "spinner_04") {
-  //   cmHeight = pick.spinner_04;
-  //   inchesHeight = Math.round(cmHeight / 2.54);
-  // }
-  // if ($(spinner.wrapper).attr("id") === `spinner_CH${cmHeighId}`) {
-  //   cmHeight = pick[`spinner_CH${cmHeighId}`];
-  //   inchesHeight = Math.round(cmHeight / 2.54);
-  // }
-  // if ($(spinner.wrapper).attr("id") === `spinner_IH${inchesHeightId}`) {
-  //   inchesHeight = pick[`spinner_IH${inchesHeightId}`];
-  //   cmHeight = Math.round(inchesHeight * 2.54);
-  // }
-  ////////////////////////////////////
-  //wst
-
-  // if ($(spinner.wrapper).attr("id") === "spinner_06") {
-  //   cmWst = pick.spinner_06;
-  //   inchesWst = Math.round(cmWst / 2.54);
-  // }
-  // if ($(spinner.wrapper).attr("id") === `spinner_CW${cmWstId}`) {
-  //   cmWst = pick[`spinner_CW${cmWstId}`];
-  //   inchesWst = Math.round(cmWst / 2.54);
-  // }
-  // if ($(spinner.wrapper).attr("id") === `spinner_IW${inchesWstId}`) {
-  //   inchesWst = pick[`spinner_IW${inchesWstId}`];
-  //   cmWst = Math.round(inchesWst * 2.54);
-  // }
-  ////////////////////////////////////////
 }
 
 function getNumberFromKeyCode(kc) {
@@ -402,4 +358,3 @@ $.getScript(
     );
   }
 );
-

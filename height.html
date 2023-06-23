@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
-  <title>BS4-Page-Layout-Basic</title>
+  <title>Easy-Diet</title>
   <link rel="shortcut icon" type="image/png" href="src/imgs/favicon.ico">
   <link rel="stylesheet" type="text/css" href="src/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="src/css/main.css">
@@ -47,12 +47,12 @@
               <div id="sowFtInput">
 
                 <label class="height-label-style">
-                  <input type="number" id="ftInput" value="5" class="text-input text-style text-input text-style text-center" />
+                  <input type="number" id="ftInput" value="5" class="text-input text-style text-input text-style text-right" />
                   ft
                 </label>
 
                 <label class="height-label-style">
-                  <input type="number" id="inInput" value="5" class="text-input text-style text-center" />
+                  <input type="number" id="inInput" value="5" class="text-input text-style text-right" />
                   in
                 </label>
 
@@ -61,7 +61,7 @@
               <div id="showCmInput" style="display: none;">
 
                 <label class="height-label-style">
-                  <input type="number" id="cmInput" value="10" class="text-input text-style text-center" />
+                  <input type="number" id="cmInput" value="10" class="text-input text-style text-right" />
                   cm
                 </label>
 
@@ -112,7 +112,7 @@
 
           console.log(parseFloat($(ftInputField).val()).toString());
 
-          if (parseFloat($(inInputField).val()) > 00) {
+          if (parseFloat($(inInputField).val()) > 0) {
             actualCmValue = toCm(parseFloat($(ftInputField).val()) + parseFloat('0.' + $(inInputField).val()));
             console.log(actualCmValue);
 
